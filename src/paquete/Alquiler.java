@@ -1,4 +1,4 @@
-package pakete;
+package paquete;
 
 public class Alquiler {
 	private Cliente cliente;

@@ -1,4 +1,4 @@
-package pakete;
+package paquete;
 
 public class Yate extends Barco{
 	private int camarotes;

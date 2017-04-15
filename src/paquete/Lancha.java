@@ -1,4 +1,4 @@
-package pakete;
+package paquete;
 
 public class Lancha extends Barco {
 	private int potencia;
