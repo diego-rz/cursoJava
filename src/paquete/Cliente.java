@@ -11,15 +11,15 @@ public class Cliente extends Persona{
 		indiceAlquileres = 0;
 	}
 	
-	public void nuevoAlquiler(Barco barco, int dias){
-		if(indiceAlquileres < 5 && barco.isHabilitado())
-			alquileres[indiceAlquileres++] = new Alquiler(this, barco, dias);
+	public void nuevoAlquiler(Vehiculo vehiculo, int dias){
+		if(indiceAlquileres < 5 && vehiculo.isHabilitado())
+			alquileres[indiceAlquileres++] = new Alquiler(this, vehiculo, dias);
 	}
 
 	public String toString(){
 		String cadena="";
 		for(int i=0; i<indiceAlquileres ; i++)
-			cadena += alquileres[i].getBarco().tipo()+"\t"+alquileres[i].getDias()+"\n"; 
+			cadena += alquileres[i].getVehiculo().tipo()+"\t"+alquileres[i].getDias()+"\t$"+alquileres[i].getPrecio()+"\n"; 
 		return "Nombre: "+nombre+" "+apellido+"\nAlquileres:\n"+cadena ;
 	}
 	

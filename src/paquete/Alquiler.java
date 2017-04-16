@@ -2,29 +2,29 @@ package paquete;
 
 public class Alquiler {
 	private Cliente cliente;
-	private Barco barco;
+	private Vehiculo vehiculo;
 	private int dias;
-	
-	public Alquiler(Cliente cliente, Barco barco, int dias) {
+	private int precio;
+
+	public Alquiler(Cliente cliente, Vehiculo vehiculo, int dias) {
 		this.cliente = cliente;
-		this.barco = barco;
+		this.vehiculo = vehiculo;
 		this.dias = dias;
-		this.barco.setHabilitado(false);
-	}
-	
-	
-	
-	public void setBarco(Barco barco) {
-		this.barco = barco;
+		this.vehiculo.setHabilitado(false);
+		precio = vehiculo.obtenerPrecio() * dias;
 	}
 
-	//	getters/setters
+	public void setVehiculo(Vehiculo vehiculo) {
+		this.vehiculo = vehiculo;
+	}
+
+	// getters/setters
 	public Cliente getCliente() {
 		return cliente;
 	}
 
-	public Barco getBarco() {
-		return barco;
+	public Vehiculo getVehiculo() {
+		return vehiculo;
 	}
 
 	public int getDias() {
@@ -33,6 +33,14 @@ public class Alquiler {
 
 	public void setDias(int dias) {
 		this.dias = dias;
+	}
+
+	public int getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(int precio) {
+		this.precio = precio;
 	}
 
 }
